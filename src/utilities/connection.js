@@ -1,3 +1,4 @@
+const path = require('path');
 const pg = require('pg');
 require('dotenv').config({ path: path.resolve(__dirname, '../../.env') });
 
