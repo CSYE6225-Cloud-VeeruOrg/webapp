@@ -1,0 +1,211 @@
+Error: Method not allowed
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:45:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:14:5
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+Error: Bad Request
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:10:21
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:328:13)
+Error: Bad Request
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:19:21
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:14:5
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+Error: Method not allowed
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:45:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:14:5
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+Error: Method not allowed
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:39:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:14:5
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+Error: Method not allowed
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:51:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:14:5
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+Error: Method not allowed
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:57:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:14:5
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+Error: Method not allowed
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:57:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:14:5
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+AggregateError
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async pgDB.connectDb (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/model/healthModel.js:7:24)
+    at async healthService.healthCheck (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/service/healthService.js:6:20)
+    at async /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:25:28
+AggregateError
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async pgDB.connectDb (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/model/healthModel.js:7:24)
+    at async healthService.healthCheck (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/service/healthService.js:6:20)
+    at async /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:25:28
+Error: Method not allowed
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:44:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:14:5
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+Error: Method not allowed
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:38:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:14:5
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+Error: Method not allowed
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:50:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:14:5
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+Error: Method not allowed
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:50:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:14:5
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+Error: Method not allowed
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:50:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:14:5
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+Error: Method not allowed
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:56:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:14:5
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+Error: Bad Request
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:10:21
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:328:13)
+Error: Bad Request
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:19:21
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:14:5
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+AggregateError
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async pgDB.connectDb (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/model/healthModel.js:7:24)
+    at async healthService.healthCheck (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/service/healthService.js:6:20)
+    at async /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:25:28
+Error: Bad Request
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:19:21
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:14:5
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/express/lib/router/layer.js:95:5)
+AggregateError
+    at /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async pgDB.connectDb (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/model/healthModel.js:7:24)
+    at async healthService.healthCheck (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/service/healthService.js:6:20)
+    at async /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:25:28
