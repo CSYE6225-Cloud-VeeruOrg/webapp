@@ -45,6 +45,10 @@ jobs:
         echo PGHOST=${{ secrets.PGHOST }} >> .env
         echo "cat .env"
         cat .env
+        echo "env"
+        echo .env
+        echo "ls -a"
+        ls -a
 
     - name: Run tests
       run: npm run test:integration
