@@ -209,3 +209,15 @@ AggregateError
     at async pgDB.connectDb (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/model/healthModel.js:7:24)
     at async healthService.healthCheck (/Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/service/healthService.js:6:20)
     at async /Users/veerendrachowdary/Desktop/SaiVeerendra_Prathipati_002781739_02/src/routes/healthRouter.js:25:28
+AggregateError
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async pgDB.connectDb (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/healthModel.js:7:24)
+    at async healthService.healthCheck (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/healthService.js:6:20)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/healthRouter.js:25:28
+AggregateError
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/pg-pool/index.js:45:11
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async pgDB.connectDb (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/healthModel.js:7:24)
+    at async healthService.healthCheck (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/healthService.js:6:20)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/healthRouter.js:26:28
