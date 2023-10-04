@@ -16,7 +16,6 @@ accountService.readCSVAndCreateAccounts = async () => {
       .on('data', async (row) => {
         const hashedPassword = await hash.hashPassword(row.password);
         row.password = hashedPassword;
-        // console.log(row);
         await accountModel.createAccount(row);
       })
       .on('end', () => {
@@ -31,7 +30,6 @@ accountService.authenticateAccount = async (email, password) => {
   try {
     const account = await accountModel.findAccount(email);
     const isValidPassword = await hash.verifyPassword(password, account.password);
-    console.log("fhghj" + isValidPassword);
     if(isValidPassword) {
       return account;
     } else {

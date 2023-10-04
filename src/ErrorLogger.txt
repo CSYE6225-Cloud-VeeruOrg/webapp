@@ -221,3 +221,153 @@ AggregateError
     at async pgDB.connectDb (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/healthModel.js:7:24)
     at async healthService.healthCheck (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/healthService.js:6:20)
     at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/healthRouter.js:26:28
+TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Object.findAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/accountModel.js:27:42)
+    at accountService.authenticateAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/accountService.js:32:40)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:21:54
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:47:12)
+TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Object.findAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/accountModel.js:27:42)
+    at accountService.authenticateAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/accountService.js:32:40)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:21:54
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:47:12)
+TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Object.findAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/accountModel.js:27:42)
+    at accountService.authenticateAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/accountService.js:32:40)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:21:54
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:47:12)
+TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Object.findAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/accountModel.js:27:42)
+    at accountService.authenticateAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/accountService.js:32:40)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:21:54
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:47:12)
+TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Object.findAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/accountModel.js:27:42)
+    at accountService.authenticateAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/accountService.js:32:40)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:21:54
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:47:12)
+TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Object.findAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/accountModel.js:27:42)
+    at accountService.authenticateAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/accountService.js:32:40)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:21:54
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:47:12)
+TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Object.findAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/accountModel.js:27:42)
+    at accountService.authenticateAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/accountService.js:32:40)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:21:54
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:47:12)
+TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Object.findAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/accountModel.js:27:42)
+    at accountService.authenticateAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/accountService.js:32:40)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:21:54
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:47:12)
+TypeError: Cannot read properties of undefined (reading 'findOne')
+    at Object.findAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/accountModel.js:27:42)
+    at accountService.authenticateAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/accountService.js:32:40)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:21:54
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:175:3)
+    at router (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:47:12)
+Error: Forbidden
+    at Object.getAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:22:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async assignmentsService.getAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/assignmentsService.js:16:28)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:47:28
+TypeError: Cannot read properties of null (reading 'user_id')
+    at Object.getAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:19:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.updateAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:56:24)
+    at async assignmentsService.updateAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/assignmentsService.js:34:28)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:75:32
+Error: Bad Request
+    at accountService.authenticateAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/accountService.js:36:19)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:21:33
+Error: Invalid Url
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/app.js:35:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:646:15
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:265:14)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:24:13
+Error: Invalid Url
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/app.js:35:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:646:15
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:265:14)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:24:13
+Error: Method not allowed
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:99:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:24:13
+SequelizeValidationError: Validation error: Validation max on num_of_attemps failed
+    at InstanceValidator._validate (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/instance-validator.js:50:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/instance-validator.js:60:7)
+    at async InstanceValidator.validate (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/instance-validator.js:54:12)
+    at async Assignment.update (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/model.js:1933:26)
+    at async Object.updateAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:60:35)
+    at async assignmentsService.updateAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/assignmentsService.js:34:28)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:75:32
