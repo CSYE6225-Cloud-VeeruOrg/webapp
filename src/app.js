@@ -33,7 +33,7 @@ app.use("/healthz", healthRouter);
 app.use("/vl/assignments", assignmentsRouter);
 app.use((req, res, next) => {
     const err = new Error("Invalid Url");
-    err.status = 404;
+    err.status = 400;
     next(err);
 });
 app.use(errorLogger);
