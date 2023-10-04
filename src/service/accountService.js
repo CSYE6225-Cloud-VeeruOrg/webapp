@@ -23,9 +23,6 @@ accountService.readCSVAndCreateAccounts = async () => {
         console.log('Accounts created from CSV successfully.');
       });
   } catch (error) {
-    // console.error('Error:', error);
-    console.log("catch service");
-    
     throw error;
   }
 }
