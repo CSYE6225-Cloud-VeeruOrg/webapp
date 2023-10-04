@@ -31,7 +31,6 @@ assignmentsService.createAssignment = async (assignmentObj) => {
 
 assignmentsService.updateAssignment = async (id, assignmentObj) => {
     try {
-        console.log("service");
         const assignment = await assignmentModel.updateAssignment(id, assignmentObj);
         return assignment;
     } catch (error) {
