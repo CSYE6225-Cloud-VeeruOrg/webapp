@@ -4,7 +4,6 @@ exports.assignmentModel = {
   getAllAssignments: async () => {
     try {
       const assignments = await models.Assignment.findAll();
-      console.log(assignments);
       if(assignments.length > 0){
         return assignments;
       }
@@ -16,8 +15,6 @@ exports.assignmentModel = {
   getAssignment: async function (id, user_id) {
     try {
       const assignment = await models.Assignment.findOne({ where : { id : id } });
-      console.log(!(assignment.user_id === user_id));
-      console.log(assignment.user_id + " " + user_id);
       if(!(assignment.user_id === user_id)) {
         const err = new Error("Forbidden");
         err.status = 403;
@@ -52,10 +49,7 @@ exports.assignmentModel = {
   
   updateAssignment: async function (id, assignmentObj) {
     try {
-      console.log("Model");
       const isExists = await this.getAssignment(id, assignmentObj.user_id);
-      console.log("Model 1");
-      console.log(isExists);
       if(isExists) {
         const updatedAssignment = await models.Assignment.update({
           name: assignmentObj.name,
@@ -74,9 +68,7 @@ exports.assignmentModel = {
   
   deleteAssignment: async function (id, user_id) {
     try {
-      console.log("model delete");
       const isExists = await this.getAssignment(id, user_id);
-      console.log(isExists);
       const deletedRows = await models.Assignment.destroy({
         where: {
           id : id

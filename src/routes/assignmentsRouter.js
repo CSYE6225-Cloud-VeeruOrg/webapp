@@ -8,7 +8,7 @@ const router = express.Router();
 router.use( async (req, res, next) => {
     if(req.baseUrl != '/vl/assignments') {
         const err = new Error("Invalid Url");
-        err.status = 404;
+        err.status = 400;
         next(err);
     }
 
@@ -56,7 +56,6 @@ router.get( "/:id", async ( req, res, next ) => {
 
 router.post("/", async ( req, res, next ) => {
     const assignmentObj = req.body;
-    console.log(assignmentObj);
         try {
             const assignment = await assignmentsService.createAssignment(assignmentObj);
             res.status(201);
@@ -71,7 +70,6 @@ router.put("/:id", async ( req, res, next ) => {
     const id = req.params.id;
     const assignmentObj = req.body;
         try {
-            console.log("Router");
             const assignment = await assignmentsService.updateAssignment(id, assignmentObj);
             res.status(204);
             res.send();
@@ -84,7 +82,6 @@ router.put("/:id", async ( req, res, next ) => {
 router.delete("/:id", async ( req, res, next ) => {
     const id = req.params.id;
     const user_id = req.body.user_id;
-    console.log(user_id);
         try {
             const status = await assignmentsService.deleteAssignment(id, user_id);
             res.status(204);

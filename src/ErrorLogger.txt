@@ -371,3 +371,179 @@ SequelizeValidationError: Validation error: Validation max on num_of_attemps fai
     at async Object.updateAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:60:35)
     at async assignmentsService.updateAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/assignmentsService.js:34:28)
     at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:75:32
+Error: Bad Request
+    at Object.findAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/accountModel.js:30:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async accountService.authenticateAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/accountService.js:31:21)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:21:33
+Error: Forbidden
+    at Object.getAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:22:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async assignmentsService.getAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/assignmentsService.js:16:28)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:47:28
+Error: Bad Request
+    at Object.findAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/accountModel.js:30:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async accountService.authenticateAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/accountService.js:31:21)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:21:33
+Error: Invalid Url
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/app.js:35:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at requestLogger (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/utilities/RequestLogger.js:8:5)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+Error: Invalid Url
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/app.js:35:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at requestLogger (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/utilities/RequestLogger.js:8:5)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+Error: Invalid Url
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/app.js:35:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at requestLogger (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/utilities/RequestLogger.js:8:5)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+Error: Invalid Url
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/app.js:35:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at requestLogger (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/utilities/RequestLogger.js:8:5)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+Error: Invalid Url
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/app.js:35:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at requestLogger (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/utilities/RequestLogger.js:8:5)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+Error
+    at Query.run (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/dialects/postgres/query.js:50:25)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/sequelize.js:315:28
+    at async PostgresQueryInterface.select (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async Assignment.findAll (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/model.js:1140:21)
+    at async Assignment.findOne (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/model.js:1240:12)
+    at async Object.getAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:18:26)
+    at async Object.deleteAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:78:24)
+    at async assignmentsService.deleteAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/assignmentsService.js:43:24)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:91:28
+Error
+    at Query.run (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/dialects/postgres/query.js:50:25)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/sequelize.js:315:28
+    at async PostgresQueryInterface.select (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:12)
+    at async Assignment.findAll (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/model.js:1140:21)
+    at async Assignment.findOne (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/model.js:1240:12)
+    at async Object.getAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:18:26)
+    at async Object.deleteAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:78:24)
+    at async assignmentsService.deleteAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/assignmentsService.js:43:24)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:91:28
+TypeError: Cannot read properties of null (reading 'user_id')
+    at Object.getAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:19:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.deleteAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:78:24)
+    at async assignmentsService.deleteAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/assignmentsService.js:43:24)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:91:28
+TypeError: Cannot read properties of null (reading 'user_id')
+    at Object.getAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:19:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.deleteAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:78:24)
+    at async assignmentsService.deleteAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/assignmentsService.js:43:24)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:91:28
+TypeError: Cannot read properties of null (reading 'user_id')
+    at Object.getAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:19:32)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.deleteAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:78:24)
+    at async assignmentsService.deleteAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/assignmentsService.js:43:24)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:91:28
+Error: Forbidden
+    at Object.getAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:22:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.deleteAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:78:24)
+    at async assignmentsService.deleteAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/assignmentsService.js:43:24)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:91:28
+SequelizeValidationError: Validation error: Validation max on num_of_attemps failed
+    at InstanceValidator._validate (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/instance-validator.js:50:13)
+    at async InstanceValidator._validateAndRunHooks (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/instance-validator.js:60:7)
+    at async InstanceValidator.validate (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/instance-validator.js:54:12)
+    at async model.save (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/model.js:2426:7)
+    at async Assignment.create (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/model.js:1362:12)
+    at async Object.createAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:39:26)
+    at async assignmentsService.createAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/assignmentsService.js:25:28)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:63:32
+SequelizeValidationError: Validation error: Validation max on points failed
+    at InstanceValidator._validate (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/instance-validator.js:50:13)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async InstanceValidator._validateAndRunHooks (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/instance-validator.js:60:7)
+    at async InstanceValidator.validate (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/instance-validator.js:54:12)
+    at async Assignment.update (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/sequelize/lib/model.js:1933:26)
+    at async Object.updateAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:60:35)
+    at async assignmentsService.updateAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/assignmentsService.js:34:28)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:77:32
+Error: Bad Request
+    at Object.findAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/accountModel.js:30:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async accountService.authenticateAccount (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/accountService.js:31:21)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:23:33
+Error: Forbidden
+    at Object.getAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:22:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.updateAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:56:24)
+    at async assignmentsService.updateAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/assignmentsService.js:34:28)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:77:32
+Error: Forbidden
+    at Object.getAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:22:21)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Object.updateAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:56:24)
+    at async assignmentsService.updateAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/assignmentsService.js:34:28)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:77:32
+TypeError: Cannot read properties of null (reading 'user_id')
+    at Object.getAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/model/assignmentModel.js:19:23)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async assignmentsService.getAssignment (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/service/assignmentsService.js:16:28)
+    at async /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/assignmentsRouter.js:49:28
+Error: Method not allowed
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/healthRouter.js:38:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/routes/healthRouter.js:12:5
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+Error: Invalid Url
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/app.js:35:17
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:346:12)
+    at next (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:280:10)
+    at requestLogger (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/src/utilities/RequestLogger.js:8:5)
+    at Layer.handle [as handle_request] (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:328:13)
+    at /Users/veerendrachowdary/Desktop/Cloud/Assignment/webapp/node_modules/express/lib/router/index.js:286:9
