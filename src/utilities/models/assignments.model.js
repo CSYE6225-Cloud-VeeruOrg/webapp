@@ -32,7 +32,7 @@ module.exports = (sequelize) => {
           },
         },
         deadline: {
-          type: DataTypes.STRING,
+          type: DataTypes.DATE,
           allowNull: false,
         },
         user_id: {
@@ -44,15 +44,15 @@ module.exports = (sequelize) => {
               }
         },
         assignment_created: {
-          type: DataTypes.STRING,
+          type: DataTypes.DATE,
           allowNull: false,
-          defaultValue: new Date().toISOString(),
+          defaultValue: new Date(),
           set(value) {}
         },
         assignment_updated: {
-          type: DataTypes.STRING,
+          type: DataTypes.DATE,
           allowNull: false,
-          defaultValue: new Date().toISOString(),
+          defaultValue: new Date(),
           set(value) {}
         }
       }, {

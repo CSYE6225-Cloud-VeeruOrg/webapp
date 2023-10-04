@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
+    console.log("acc");
     sequelize.define("Account", {
         id: {
           type: DataTypes.UUID,
@@ -32,15 +33,15 @@ module.exports = (sequelize) => {
           },
         },
         account_created: {
-          type: DataTypes.STRING,
+          type: DataTypes.DATE,
           allowNull: false,
-          defaultValue: new Date().toISOString(),
+          defaultValue: new Date(),
           set(value) {}
         },
         account_updated: {
-          type: DataTypes.STRING,
+          type: DataTypes.DATE,
           allowNull: false,
-          defaultValue: new Date().toISOString(),
+          defaultValue: new Date(),
           set(value) {}
         }
       }, {

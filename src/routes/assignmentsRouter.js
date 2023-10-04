@@ -95,5 +95,11 @@ router.delete("/:id", async ( req, res, next ) => {
         } 
 });
 
+router.use("/", async ( req, res, next ) => {
+    const err = new Error("Method not allowed");
+    err.status = 405;
+    next(err);
+});
+
 module.exports = router;
 

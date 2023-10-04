@@ -6,7 +6,6 @@ exports.accountModel = {
   createAccount: async (data) => {
     try {
     const existingUser = await models.Account.findOne({ where: { email: data.email } });
-  
     if (!existingUser) {
       await models.Account.create({
         firstName: data.first_name,
