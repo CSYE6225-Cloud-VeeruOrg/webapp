@@ -1,21 +1,21 @@
 const express = require('express');
 const healthService = require('../service/healthService');
-const url = require('url');
 
 const router = express.Router();
 
 router.use((req, res, next) => {
-    const pathname = url.parse(req.url).pathname;
-    if(pathname != '/healthz') {
+    if(req.baseUrl != '/healthz') {
         const err = new Error("Bad Request");
         err.status = 400;
-        next(err);
+        return next(err);
     }
     next();
 });
 
-router.get( "/healthz", async ( req, res, next ) => {
-    if(Object.keys(req.query).length > 0) {
+
+router.get( "/", async ( req, res, next ) => {
+    console.log("get");
+    if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 0)) {
         const err = new Error("Bad Request");
         err.status = 400;
         next(err);
@@ -32,31 +32,31 @@ router.get( "/healthz", async ( req, res, next ) => {
             next(error);
         }
     }
+
 });
 
-router.put("/healthz", async ( req, res, next ) => {
+router.put("/", async ( req, res, next ) => {
     const err = new Error("Method not allowed");
     err.status = 405;
     next(err);
 });
 
-router.post("/healthz", async ( req, res, next ) => {
+router.post("/", async ( req, res, next ) => {
     const err = new Error("Method not allowed");
     err.status = 405;
     next(err);
 });
 
-router.patch("/healthz", async ( req, res, next ) => {
+router.patch("/", async ( req, res, next ) => {
     const err = new Error("Method not allowed");
     err.status = 405;
     next(err);
 });
 
-router.delete("/healthz", async ( req, res, next ) => {
+router.delete("/", async ( req, res, next ) => {
     const err = new Error("Method not allowed");
     err.status = 405;
     next(err);
 });
 
 module.exports = router;
-
