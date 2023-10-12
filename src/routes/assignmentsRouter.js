@@ -31,13 +31,13 @@ router.use( async (req, res, next) => {
 
 router.get( "/", async ( req, res, next ) => {
     
-    if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
-        console.log(req.body);
-        const err = new Error("Bad Request");
-        err.status = 400;
-        next(err);
-    }
+    
     try {
+        if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
+            const err = new Error("Bad Request");
+            err.status = 400;
+            throw err;
+        }
         const assignments = await assignmentsService.getAllAssignments();
         res.json(assignments);
     }
@@ -49,13 +49,13 @@ router.get( "/", async ( req, res, next ) => {
 });
 
 router.get( "/:id", async ( req, res, next ) => {
-    if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
-        console.log(Object.keys(req.query).length);
-        const err = new Error("Bad Request");
-        err.status = 400;
-        next(err);
-    }
+    
     try {
+        if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
+            const err = new Error("Bad Request");
+            err.status = 400;
+            throw err;
+        }
         const id = req.params.id;
         const assignment = await assignmentsService.getAssignment(id);
         res.json(assignment);
@@ -95,14 +95,14 @@ router.put("/:id", async ( req, res, next ) => {
 });
 
 router.delete("/:id", async ( req, res, next ) => {
-    if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
-        const err = new Error("Bad Request");
-        err.status = 400;
-        next(err);
-    }
-    const id = req.params.id;
-    const user_id = req.body.user_id;
         try {
+            if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
+                const err = new Error("Bad Request");
+                err.status = 400;
+                throw err;
+            }
+            const id = req.params.id;
+            const user_id = req.body.user_id;
             const status = await assignmentsService.deleteAssignment(id, user_id);
             res.status(204);
             res.send();
@@ -110,6 +110,7 @@ router.delete("/:id", async ( req, res, next ) => {
             error.status = error.status || 404;
             next(error);
         } 
+    
 });
 
 router.use("/", async ( req, res, next ) => {
