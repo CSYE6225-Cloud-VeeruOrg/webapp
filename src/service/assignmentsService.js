@@ -11,9 +11,9 @@ assignmentsService.getAllAssignments = async () => {
     }
 };
 
-assignmentsService.getAssignment = async (id, user_id) => {
+assignmentsService.getAssignment = async (id) => {
     try {
-        const assignment = await assignmentModel.getAssignment(id, user_id);
+        const assignment = await assignmentModel.getAssignment(id);
         return assignment;
     } catch (error) {
         throw error;

@@ -23,7 +23,7 @@ module.exports = (sequelize) => {
               max: 10,
             }
         },
-        num_of_attemps: {
+        num_of_attempts: {
           type: DataTypes.INTEGER,
           allowNull: false,
           validate: {
@@ -53,7 +53,6 @@ module.exports = (sequelize) => {
           type: DataTypes.DATE,
           allowNull: false,
           defaultValue: new Date(),
-          set(value) {}
         }
       }, {
         timestamps: false,
