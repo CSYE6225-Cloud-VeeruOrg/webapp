@@ -12,7 +12,6 @@ router.use((req, res, next) => {
     next();
 });
 
-
 router.get( "/", async ( req, res, next ) => {
     if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 0)) {
         const err = new Error("Bad Request");

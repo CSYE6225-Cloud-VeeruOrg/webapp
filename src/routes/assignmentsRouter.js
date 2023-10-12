@@ -2,6 +2,7 @@ const express = require('express');
 const assignmentsService = require('../service/assignmentsService');
 const url = require('url');
 const accountService = require('../service/accountService');
+const validator = require('../utilities/validator');
 
 const router = express.Router();
 
@@ -10,14 +11,13 @@ router.use( async (req, res, next) => {
         const err = new Error("Invalid Url");
         err.status = 400;
         next(err);
-    }
-
-    const authHeader = req.headers.authorization;
-    const credentials = authHeader.split(' ')[1];
-    const decodedCredentials = Buffer.from(credentials, 'base64').toString('utf-8');
-    const [email, password] = decodedCredentials.split(':');
+    }    
 
     try {
+        const authHeader = req.headers.authorization;
+        const credentials = authHeader.split(' ')[1];
+        const decodedCredentials = Buffer.from(credentials, 'base64').toString('utf-8');
+        const [email, password] = decodedCredentials.split(':');
         const isAuthenticated = await accountService.authenticateAccount(email, password);
         if(isAuthenticated != null) {
             req.body.user_id = isAuthenticated.id;
@@ -30,25 +30,38 @@ router.use( async (req, res, next) => {
 });
 
 router.get( "/", async ( req, res, next ) => {
+    
+    if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
+        console.log(req.body);
+        const err = new Error("Bad Request");
+        err.status = 400;
+        next(err);
+    }
     try {
         const assignments = await assignmentsService.getAllAssignments();
         res.json(assignments);
     }
     catch(error) {
-        error.status = 400;
+        error.status = error.status || 400;
         next(error);
+
     }
 });
 
 router.get( "/:id", async ( req, res, next ) => {
+    if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
+        console.log(Object.keys(req.query).length);
+        const err = new Error("Bad Request");
+        err.status = 400;
+        next(err);
+    }
     try {
         const id = req.params.id;
-        const user_id = req.body.user_id;
-        const assignment = await assignmentsService.getAssignment(id, user_id);
+        const assignment = await assignmentsService.getAssignment(id);
         res.json(assignment);
     }
     catch(error) {
-        error.status = 403;
+        error.status = error.status || 400;
         next(error);
     }
 });
@@ -70,9 +83,11 @@ router.put("/:id", async ( req, res, next ) => {
     const id = req.params.id;
     const assignmentObj = req.body;
         try {
-            const assignment = await assignmentsService.updateAssignment(id, assignmentObj);
-            res.status(204);
-            res.send();
+            if(validator.validateAssignmentObj(assignmentObj)){
+                const assignment = await assignmentsService.updateAssignment(id, assignmentObj);
+                res.status(204);
+                res.send();
+            }     
         } catch (error) {
             error.status = error.status || 400;
             next(error);
@@ -80,6 +95,11 @@ router.put("/:id", async ( req, res, next ) => {
 });
 
 router.delete("/:id", async ( req, res, next ) => {
+    if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
+        const err = new Error("Bad Request");
+        err.status = 400;
+        next(err);
+    }
     const id = req.params.id;
     const user_id = req.body.user_id;
         try {
