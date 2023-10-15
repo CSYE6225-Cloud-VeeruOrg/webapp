@@ -12,7 +12,6 @@ router.use( async (req, res, next) => {
         err.status = 400;
         next(err);
     }    
-
     try {
         const authHeader = req.headers.authorization;
         const credentials = authHeader.split(' ')[1];
