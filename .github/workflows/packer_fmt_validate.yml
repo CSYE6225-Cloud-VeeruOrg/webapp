@@ -9,7 +9,7 @@ jobs:
     packer:
         runs-on: ubuntu-latest
         name: Run Packer
-        
+
         steps:
         - name: Checkout
           uses: actions/checkout@v3
@@ -23,14 +23,14 @@ jobs:
         - name: Run `packer init`
           id: init
           run: |
-            packer init ../packer/ami.us-east-1.pkr.hcl
+            packer init ../../packer/ami.us-east-1.pkr.hcl
 
         - name: Run Packer fmt
           run: |
             set -e
-            packer fmt -check ../packer/ami.us-east-1.pkr.hcl
+            packer fmt -check ../../packer/ami.us-east-1.pkr.hcl
 
         - name: Run Packer validate
           run: |
             set -e
-            packer validate ../packer/ami.us-east-1.pkr.hcl
+            packer validate ../../packer/ami.us-east-1.pkr.hcl
