@@ -73,7 +73,7 @@ build {
   ]
 
   provisioner "file" {
-    source      = "./webapp.zip"
+    source      = "packer/webapp.zip"
     destination = "/home/admin/webapp.zip"
   }
 
@@ -82,6 +82,6 @@ build {
     //     "DEBIAN_FRONTEND=noninteractive",
     //     "CHECKPOINT_DISABLE=1"
     // ]
-    script = "./webapp.sh"
+    script = "packer/webapp.sh"
   }
 }
