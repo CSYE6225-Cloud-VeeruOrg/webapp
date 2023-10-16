@@ -1,0 +1,82 @@
+name: AMI Build
+
+on:
+  pull_request:
+    types:
+      - closed
+    branches:
+        - main
+
+jobs:
+  build:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    name: AMI Build
+    
+    services:
+        postgres:
+          image: postgres:latest
+          env:
+            POSTGRES_DB: ${{ secrets.PGDATABASE }}
+            POSTGRES_USER: ${{ secrets.PGUSER }}
+            POSTGRES_PASSWORD: ${{ secrets.PGPASSWORD }}
+            POSTGRES_PORT: ${{ secrets.PGPORT }}
+            POSTGRES_HOST: ${{ secrets.PGHOST }}
+          ports:
+            - 5432:5432
+          options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
+  
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    - name: Set up Node.js
+      uses: actions/setup-node@v2
+      with:
+        node-version: '16.x'
+
+    - name: Install dependencies
+      run: npm install
+
+    - name: "Setup .env file"
+      run: |
+        touch .env
+        echo PGDATABASE=${{ secrets.PGDATABASE }} >> .env
+        echo PGUSER=${{ secrets.PGUSER }} >> .env
+        echo PGPASSWORD=${{ secrets.PGPASSWORD }} >> .env
+        echo PGPORT=${{ secrets.PGPORT }} >> .env
+        echo PGHOST=${{ secrets.PGHOST }} >> .env
+
+    - name: Run tests
+      run: npm run test:integration
+
+    - name: Zip Repository
+      run: |
+        zip -r webapp.zip .
+        mkdir -p zip
+        mv webapp.zip zip/
+
+    - name: Setup Packer
+      uses: hashicorp/setup-packer@main
+      id: setup
+      with:
+        version: "latest"
+
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+
+    - name: Run Packer init
+      id: init
+      run: |
+        packer init packer/ami.us-east-1.pkr.hcl
+
+    - name: Build AMI
+      run: |
+        packer build -var "artifact=zip/webapp.zip" packer/ami.us-east-1.pkr.hcl

@@ -1,7 +1,6 @@
 packer {
   required_plugins {
     amazon = {
-
       source  = "github.com/hashicorp/amazon",
       version = "~> 1"
     }
@@ -33,6 +32,10 @@ variable "subnet_id" {
   default = "subnet-0f53294986bc969b6"
 }
 
+variable "artifact" {
+  type    = string
+  default = ""
+}
 
 source "amazon-ebs" "veeru-ami" {
   region          = "${var.aws_region}"
@@ -73,15 +76,15 @@ build {
   ]
 
   provisioner "file" {
-    source      = "packer/webapp.zip"
+    source      = "${var.artifact}"
     destination = "/home/admin/webapp.zip"
   }
 
   provisioner "shell" {
-    // environment_vars = [
-    //     "DEBIAN_FRONTEND=noninteractive",
-    //     "CHECKPOINT_DISABLE=1"
-    // ]
     script = "packer/webapp.sh"
+    environment_vars = [
+      "DEBIAN_FRONTEND=noninteractive",
+      "CHECKPOINT_DISABLE=1"
+    ]
   }
 }

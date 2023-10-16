@@ -61,18 +61,15 @@ sudo apt-get install unzip -y
 #mv webapp.zip /mywebapp
 #cd mywebapp
 
-# Unzip the uploaded file (replace 'your-app.zip' with your actual ZIP file name)
 unzip /home/admin/webapp.zip -d /home/admin/webapp
 
-cd /home/admin/webapp/webapp
+cd /home/admin/webapp
 
-# Install app dependencies (assuming you have a package.json file)
+# Install app dependencies
 npm install
 # npm install -g nodemon
 # npm install --save-dev nodemon
 
-# Start your Node.js app (replace 'app.js' with your actual entry point)
-# You may want to use a process manager like PM2 to keep your app running
 # cd src
 
 echo "Your server setup is complete. You can now deploy your Node.js app."
