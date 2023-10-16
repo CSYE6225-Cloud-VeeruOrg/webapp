@@ -14,13 +14,13 @@ jobs:
         - name: Checkout
           uses: actions/checkout@v3
 
-        - name: Setup `packer`
+        - name: Setup Packer
           uses: hashicorp/setup-packer@main
           id: setup
           with:
             version: "latest"
 
-        - name: Run `packer init`
+        - name: Run Packer init
           id: init
           run: |
             packer init packer/ami.us-east-1.pkr.hcl
