@@ -55,7 +55,7 @@ jobs:
 
     - name: Zip Repository
       run: |
-        zip -r webapp.zip .
+        zip -r webapp.zip . .env
         mkdir -p zip
         mv webapp.zip zip/
 

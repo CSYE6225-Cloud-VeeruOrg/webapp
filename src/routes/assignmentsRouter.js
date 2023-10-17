@@ -28,9 +28,7 @@ router.use( async (req, res, next) => {
     }
 });
 
-router.get( "/", async ( req, res, next ) => {
-    
-    
+router.get( "/", async ( req, res, next ) => {   
     try {
         if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
             const err = new Error("Bad Request");
@@ -48,7 +46,6 @@ router.get( "/", async ( req, res, next ) => {
 });
 
 router.get( "/:id", async ( req, res, next ) => {
-    
     try {
         if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
             const err = new Error("Bad Request");
@@ -67,48 +64,48 @@ router.get( "/:id", async ( req, res, next ) => {
 
 
 router.post("/", async ( req, res, next ) => {
-    const assignmentObj = req.body;
-        try {
-            const assignment = await assignmentsService.createAssignment(assignmentObj);
-            res.status(201);
-            res.json(assignment);
-        } catch (error) {
-            error.status = 400;
-            next(error);
-        } 
+    try {
+        const assignmentObj = req.body;
+        const assignment = await assignmentsService.createAssignment(assignmentObj);
+        res.status(201);
+        res.json(assignment);
+    } catch (error) {
+        error.status = 400;
+        next(error);
+    } 
 });
 
 router.put("/:id", async ( req, res, next ) => {
-    const id = req.params.id;
-    const assignmentObj = req.body;
-        try {
-            if(validator.validateAssignmentObj(assignmentObj)){
-                const assignment = await assignmentsService.updateAssignment(id, assignmentObj);
-                res.status(204);
-                res.send();
-            }     
-        } catch (error) {
-            error.status = error.status || 400;
-            next(error);
-        } 
+    try {
+        const id = req.params.id;
+        const assignmentObj = req.body;
+        if(validator.validateAssignmentObj(assignmentObj)){
+            const assignment = await assignmentsService.updateAssignment(id, assignmentObj);
+            res.status(204);
+            res.send();
+        }     
+    } catch (error) {
+        error.status = error.status || 400;
+        next(error);
+    } 
 });
 
 router.delete("/:id", async ( req, res, next ) => {
-        try {
-            if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
-                const err = new Error("Bad Request");
-                err.status = 400;
-                throw err;
-            }
-            const id = req.params.id;
-            const user_id = req.body.user_id;
-            const status = await assignmentsService.deleteAssignment(id, user_id);
-            res.status(204);
-            res.send();
-        } catch (error) {
-            error.status = error.status || 404;
-            next(error);
-        } 
+    try {
+        if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
+            const err = new Error("Bad Request");
+            err.status = 400;
+            throw err;
+        }
+        const id = req.params.id;
+        const user_id = req.body.user_id;
+        const status = await assignmentsService.deleteAssignment(id, user_id);
+        res.status(204);
+        res.send();
+    } catch (error) {
+        error.status = error.status || 404;
+        next(error);
+    } 
     
 });
 
