@@ -39,10 +39,9 @@ variable "artifact" {
 
 source "amazon-ebs" "veeru-ami" {
   region          = "${var.aws_region}"
-  ami_name        = "csye6225_veeru_ami_debian"
+  ami_name        = ""csye6225_${formatdate("YYYY_MM_DD_hh_mm_ss", timestamp())}""
   ami_description = "AMI for assignment 5"
   ami_users = [
-    "339269296568",
     "042700404980",
   ]
 
@@ -59,7 +58,7 @@ source "amazon-ebs" "veeru-ami" {
   source_ami    = "${var.source_ami}"
   ssh_username  = "${var.ssh_username}"
   subnet_id     = "${var.subnet_id}"
-  vpc_id        = "${var.vpc_id}"
+  // vpc_id        = "${var.vpc_id}"
   profile       = "dev"
 
   launch_block_device_mappings {
