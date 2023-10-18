@@ -82,4 +82,4 @@ jobs:
 
     - name: Build AMI
       run: |
-        packer build -var "artifact=zip/webapp.zip" packer/ami.debian.pkr.hcl
+        packer build -var "artifact=zip/webapp.zip" -var "db_user=${{ secrets.PGUSER }}" -var "db_password=${{ secrets.PGPASSWORD }} packer/ami.debian.pkr.hcl
