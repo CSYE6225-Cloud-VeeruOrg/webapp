@@ -37,6 +37,16 @@ variable "artifact" {
   default = ""
 }
 
+variable "db_user" {
+  type    = string
+  default = ""
+}
+
+variable "db_password" {
+  type    = string
+  default = ""
+}
+
 source "amazon-ebs" "veeru-ami" {
   region          = "${var.aws_region}"
   ami_name        = "csye6225_${formatdate("YYYY_MM_DD_hh_mm_ss", timestamp())}"
@@ -83,7 +93,9 @@ build {
     script = "packer/webapp.sh"
     environment_vars = [
       "DEBIAN_FRONTEND=noninteractive",
-      "CHECKPOINT_DISABLE=1"
+      "CHECKPOINT_DISABLE=1",
+      "DB_USER=${var.db_user}",
+      "DB_PASSWORD=${var.db_password}"
     ]
   }
 }
