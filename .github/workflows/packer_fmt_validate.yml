@@ -28,9 +28,9 @@ jobs:
         - name: Run Packer fmt
           run: |
             set -e
-            packer fmt -check packer/ami.us-east-1.pkr.hcl
+            packer fmt -check packer/ami.debian.pkr.hcl
 
         - name: Run Packer validate
           run: |
             set -e
-            packer validate packer/ami.us-east-1.pkr.hcl
+            packer validate packer/ami.debian.pkr.hcl
