@@ -16,22 +16,15 @@ sudo systemctl enable postgresql
 
 echo "started and enabled PostgreSQL service"
 
-#sudo -u postgres psql
 sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD '1234567890';"
-
-echo "ALTER USER PASSOWRD 1"
 
 # Initialize the Postgres database
 sudo service postgresql initdb
 
-#sudo service postgresql start
-
 # Create a new PostgreSQL user and database
-sudo -u postgres psql -c "ALTER USER postgres WITH PASSWORD 'veeru1234';"
+sudo -u postgres psql -c "ALTER USER $DB_USER WITH PASSWORD '$DB_PASSWORD';"
 sudo -u postgres psql -c "CREATE DATABASE test;"
-sudo -u postgres psql -c "CREATE USER veerendrachowdary WITH ENCRYPTED PASSWORD 'Hitman@45'";
-sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE test TO postgres;"
-sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE test TO veerendrachowdary;"
+sudo -u postgres psql -c "GRANT ALL PRIVILEGES ON DATABASE test TO $DB_USER;"
 
 # Configure PostgreSQL to allow remote connections (be cautious with this)
 sudo sed -i "s/#listen_addresses = 'localhost'/listen_addresses = '*'/g" /etc/postgresql/<version>/main/postgresql.conf
@@ -54,12 +47,6 @@ sudo apt-get install nodejs -y
 
 # Install unzip if not already installed
 sudo apt-get install unzip -y
-
-# Create a directory for your app
-#mkdir mywebapp
-
-#mv webapp.zip /mywebapp
-#cd mywebapp
 
 unzip /home/admin/webapp.zip -d /home/admin/webapp
 
