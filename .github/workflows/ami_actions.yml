@@ -78,8 +78,8 @@ jobs:
     - name: Run Packer init
       id: init
       run: |
-        packer init packer/ami.us-east-1.pkr.hcl
+        packer init packer/ami.debian.pkr.hcl
 
     - name: Build AMI
       run: |
-        packer build -var "artifact=zip/webapp.zip" packer/ami.us-east-1.pkr.hcl
+        packer build -var "artifact=zip/webapp.zip" packer/ami.debian.pkr.hcl
