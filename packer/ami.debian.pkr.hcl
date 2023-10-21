@@ -85,7 +85,7 @@ build {
   ]
 
   provisioner "file" {
-    source      = "${var.artifact}"
+  source      = "${var.artifact}"
     destination = "/home/admin/webapp.zip"
   }
 
