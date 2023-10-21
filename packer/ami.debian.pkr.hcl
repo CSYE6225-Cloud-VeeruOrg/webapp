@@ -85,12 +85,12 @@ build {
   ]
 
   provisioner "file" {
-  source      = "${var.artifact}"
+    source      = "${var.artifact}"
     destination = "/home/admin/webapp.zip"
   }
 
   provisioner "shell" {
-    script = "packer/webapp.sh"
+    script = ""
     environment_vars = [
       "DEBIAN_FRONTEND=noninteractive",
       "CHECKPOINT_DISABLE=1",
