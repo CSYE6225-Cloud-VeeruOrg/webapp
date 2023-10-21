@@ -90,7 +90,7 @@ build {
   }
 
   provisioner "shell" {
-    script = ""
+    script = "packer/webapp.sh"
     environment_vars = [
       "DEBIAN_FRONTEND=noninteractive",
       "CHECKPOINT_DISABLE=1",
