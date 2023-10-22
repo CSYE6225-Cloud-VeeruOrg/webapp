@@ -3,7 +3,7 @@ const csv = require('csv-parser');
 const sequelize = require('../utilities/sequelize');
 const { accountModel } = require('../model/accountModel');
 const hash = require('../utilities/hashing');
-const csvFilePath = '../opt/user.csv';
+const csvFilePath = '/opt/user.csv';
 
 const accountService = {}
 
