@@ -37,16 +37,6 @@ variable "artifact" {
   default = ""
 }
 
-variable "db_user" {
-  type    = string
-  default = ""
-}
-
-variable "db_password" {
-  type    = string
-  default = ""
-}
-
 source "amazon-ebs" "veeru-ami" {
   region          = "${var.aws_region}"
   ami_name        = "csye6225_${formatdate("YYYY_MM_DD_hh_mm_ss", timestamp())}"
@@ -68,7 +58,6 @@ source "amazon-ebs" "veeru-ami" {
   source_ami    = "${var.source_ami}"
   ssh_username  = "${var.ssh_username}"
   subnet_id     = "${var.subnet_id}"
-  // vpc_id        = "${var.vpc_id}"
   profile = "dev"
 
   launch_block_device_mappings {
@@ -89,13 +78,16 @@ build {
     destination = "/home/admin/webapp.zip"
   }
 
+  provisioner "file" {
+    source      = "packer/node.service"
+    destination = "/home/admin/node.service"
+  }
+
   provisioner "shell" {
     script = "packer/webapp.sh"
     environment_vars = [
       "DEBIAN_FRONTEND=noninteractive",
       "CHECKPOINT_DISABLE=1",
-      "DB_USER=${var.db_user}",
-      "DB_PASSWORD=${var.db_password}"
     ]
   }
 }

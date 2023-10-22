@@ -1,0 +1,12 @@
+[Unit]
+Description=My Application
+After=cloud-init.target
+Requires=cloud-init.target
+
+[Service]
+EnvironmentFile=/etc/environment
+ExecStart=/usr/bin/node /home/admin/webapp/webapp/src/app.js
+Type=simple
+
+[Install]
+WantedBy=cloud-init.target
