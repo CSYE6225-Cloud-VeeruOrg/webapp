@@ -58,7 +58,7 @@ source "amazon-ebs" "veeru-ami" {
   source_ami    = "${var.source_ami}"
   ssh_username  = "${var.ssh_username}"
   subnet_id     = "${var.subnet_id}"
-  profile = "dev"
+  profile       = "dev"
 
   launch_block_device_mappings {
     device_name           = "/dev/xvda"
