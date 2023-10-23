@@ -54,7 +54,8 @@ jobs:
       run: |
         rm -rf node_modules
         rm -rf .git
-
+        rm .env
+        
     - name: Zip Repository
       run: |
         zip -r webapp.zip .

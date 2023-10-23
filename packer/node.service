@@ -4,6 +4,7 @@ After=cloud-init.target
 Requires=cloud-init.target
 
 [Service]
+User=csye6225
 EnvironmentFile=/etc/environment
 ExecStart=/usr/bin/node /home/admin/webapp/src/app.js
 Type=simple
