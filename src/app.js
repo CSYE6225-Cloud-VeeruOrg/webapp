@@ -16,6 +16,7 @@ const loadUser = async () => {
     try{
         await accountService.readCSVAndCreateAccounts();
     } catch(error) {
+        console.log(error);
     }
 }
 
