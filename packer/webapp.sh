@@ -24,7 +24,9 @@ sudo apt-get install unzip -y
 sudo groupadd csye6225
 sudo useradd -s /bin/false -g csye6225 -d /opt/csye6225 -m csye6225
 
-unzip /tmp/webapp.zip -d /opt/csye6225/webapp
+sudo mv /tmp/webapp.zip /opt/csye6225/
+
+unzip /opt/csye6225/webapp.zip -d /opt/csye6225/webapp
 
 cd /opt/csye6225/webapp
 
