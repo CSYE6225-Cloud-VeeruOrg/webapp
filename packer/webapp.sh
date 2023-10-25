@@ -21,14 +21,14 @@ sudo mv /tmp/node.service /etc/systemd/system/
 # Install unzip
 sudo apt-get install unzip -y
 
-mkdir -p /opt/webapp
+sudo mkdir -p /opt/webapp
 
-unzip /tmp/webapp.zip -d /opt/webapp/
+sudo unzip /tmp/webapp.zip -d /opt/webapp/
 
 cd /opt/webapp
 
 # Install app dependencies
-npm install
+sudo npm install
 
 sudo mv /opt/webapp/opt/user.csv /opt/
 
