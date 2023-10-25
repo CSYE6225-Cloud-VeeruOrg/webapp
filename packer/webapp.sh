@@ -16,25 +16,27 @@ echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.co
 sudo apt-get update
 sudo apt-get install nodejs -y
 
-sudo mv /home/admin/node.service /etc/systemd/system/
+sudo mv /tmp/node.service /etc/systemd/system/
 
 # Install unzip
 sudo apt-get install unzip -y
 
-unzip /home/admin/webapp.zip -d /home/admin/webapp
+sudo groupadd csye6225
+sudo useradd -s /bin/false -g csye6225 -d /opt/csye6225 -m csye6225
 
-cd /home/admin/webapp
+unzip /tmp/webapp.zip -d /opt/csye6225/webapp
+
+cd /opt/csye6225/webapp
 
 # Install app dependencies
 npm install
 
-sudo mv /home/admin/webapp/opt/user.csv /opt/
+sudo mv /opt/csye6225/webapp/opt/user.csv /opt/
 
 # Systemd setup
-sudo groupadd csye6225
-sudo useradd -s /bin/false -g csye6225 -d /opt/csye6225 -m csye6225
-sudo chown -R csye6225:csye6225 /home/admin/webapp
-sudo chmod -R 755 /home/admin/webapp
+
+# sudo chown -R csye6225:csye6225 /home/admin/webapp
+# sudo chmod -R 755 /home/admin/webapp
 # sudo chown -R csye6225:csye6225 /etc/environment
 # sudo chmod -R 755 /etc/environment
 sudo systemctl daemon-reload
