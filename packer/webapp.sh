@@ -38,8 +38,8 @@ sudo useradd -s /bin/false -g csye6225 -d /opt/csye6225 -m csye6225
 sudo mv /opt/webapp /opt/csye6225/
 
 
-sudo chown csye6225:csye6225 /opt/csye6225/webapp
-sudo chmod 750 /opt/csye6225/webapp
+sudo chown -R csye6225:csye6225 /opt/csye6225/webapp
+sudo chmod -R 750 /opt/csye6225/webapp
 
 
 # Systemd setup
