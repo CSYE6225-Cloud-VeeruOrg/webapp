@@ -24,14 +24,14 @@ variable "artifact" {
 }
 
 variable "ami_users" {
-  type    = list(string)
+  type = list(string)
   default = [
     "042700404980",
   ]
 }
 
 variable "ami_regions" {
-  type    = list(string)
+  type = list(string)
   default = [
     "us-east-1",
   ]
