@@ -8,6 +8,7 @@ User=csye6225
 EnvironmentFile=/etc/environment
 ExecStart=/usr/bin/node /home/admin/webapp/src/app.js
 Type=simple
+Restart=always
 
 [Install]
 WantedBy=cloud-init.target

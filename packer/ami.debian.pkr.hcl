@@ -7,47 +7,13 @@ packer {
   }
 }
 
-variable "aws_region" {
-  type    = string
-  default = "us-east-1"
-}
-
-variable "source_ami" {
-  type    = string
-  default = "ami-06db4d78cb1d3bbf9"
-}
-
-variable "ssh_username" {
-  type    = string
-  default = "admin"
-}
-
-variable "vpc_id" {
-  type    = string
-  default = "vpc-0d3fb407bc4326b4a"
-}
-
-variable "subnet_id" {
-  type    = string
-  default = "subnet-0f53294986bc969b6"
-}
-
-variable "artifact" {
-  type    = string
-  default = ""
-}
-
 source "amazon-ebs" "veeru-ami" {
   region          = "${var.aws_region}"
   ami_name        = "csye6225_${formatdate("YYYY_MM_DD_hh_mm_ss", timestamp())}"
   ami_description = "AMI for assignment 5"
-  ami_users = [
-    "042700404980",
-  ]
+  ami_users = var.ami_users
 
-  ami_regions = [
-    "${var.aws_region}",
-  ]
+  ami_regions = var.ami_regions
 
   aws_polling {
     delay_seconds = 120
@@ -79,7 +45,7 @@ build {
   }
 
   provisioner "file" {
-    source      = "packer/node.service"
+    source      = "node.service"
     destination = "/home/admin/node.service"
   }
 

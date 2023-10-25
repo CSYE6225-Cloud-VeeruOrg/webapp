@@ -33,6 +33,10 @@ sudo mv /home/admin/webapp/opt/user.csv /opt/
 # Systemd setup
 sudo groupadd csye6225
 sudo useradd -s /bin/false -g csye6225 -d /opt/csye6225 -m csye6225
+sudo chown -R csye6225:csye6225 /home/admin/webapp
+sudo chmod -R 755 /home/admin/webapp
+# sudo chown -R csye6225:csye6225 /etc/environment
+# sudo chmod -R 755 /etc/environment
 sudo systemctl daemon-reload
 sudo systemctl enable node.service
 sudo systemctl start node.service
