@@ -15,9 +15,7 @@ const app = express();
 const loadUser = async () => {
     try{
         await accountService.readCSVAndCreateAccounts();
-    } catch(error) {
-        console.log(error);
-    }
+    } catch(error) {}
 }
 
 loadUser();

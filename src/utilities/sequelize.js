@@ -19,9 +19,7 @@ const modelDefiners = [
   ];
   
   for(const modelDefiner of modelDefiners) {
-    console.log(process.env.PGHOST);
     modelDefiner(sequelize);
-    console.log(process.env.PGHOST);
   }
   
   association(sequelize);
