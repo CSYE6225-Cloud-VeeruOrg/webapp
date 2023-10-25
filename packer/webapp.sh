@@ -21,6 +21,8 @@ sudo mv /tmp/node.service /etc/systemd/system/
 # Install unzip
 sudo apt-get install unzip -y
 
+mkdir -p /opt/webapp
+
 unzip /tmp/webapp.zip -d /opt/webapp/
 
 cd /opt/webapp
