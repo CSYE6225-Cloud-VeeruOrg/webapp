@@ -38,15 +38,12 @@ sudo useradd -s /bin/false -g csye6225 -d /opt/csye6225 -m csye6225
 sudo mv /opt/webapp /opt/csye6225/
 
 
-
+sudo chown csye6225:csye6225 /opt/csye6225/webapp
+sudo chmod 750 /opt/csye6225/webapp
 
 
 # Systemd setup
 
-# sudo chown -R csye6225:csye6225 /home/admin/webapp
-# sudo chmod -R 755 /home/admin/webapp
-# sudo chown -R csye6225:csye6225 /etc/environment
-# sudo chmod -R 755 /etc/environment
 sudo systemctl daemon-reload
 sudo systemctl enable node.service
 sudo systemctl start node.service
