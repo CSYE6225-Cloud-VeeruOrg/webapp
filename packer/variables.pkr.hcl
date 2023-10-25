@@ -36,3 +36,13 @@ variable "ami_regions" {
     "us-east-1",
   ]
 }
+
+variable "profile" {
+  type    = string
+  default = "dev"
+}
+
+variable "instance_type" {
+  type    = string
+  default = "t2.micro"
+}
