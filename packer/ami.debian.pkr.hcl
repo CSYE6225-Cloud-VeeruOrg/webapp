@@ -20,11 +20,11 @@ source "amazon-ebs" "veeru-ami" {
     max_attempts  = 50
   }
 
-  instance_type = "t2.micro"
+  instance_type = var.instance_type
   source_ami    = "${var.source_ami}"
   ssh_username  = "${var.ssh_username}"
   subnet_id     = "${var.subnet_id}"
-  profile       = "dev"
+  profile       = var.profile
 
   launch_block_device_mappings {
     device_name           = "/dev/xvda"
