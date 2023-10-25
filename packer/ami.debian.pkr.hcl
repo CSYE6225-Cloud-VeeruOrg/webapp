@@ -41,12 +41,12 @@ build {
 
   provisioner "file" {
     source      = "${var.artifact}"
-    destination = "/home/admin/webapp.zip"
+    destination = "/tmp/webapp.zip"
   }
 
   provisioner "file" {
     source      = "node.service"
-    destination = "/home/admin/node.service"
+    destination = "/tmp/node.service"
   }
 
   provisioner "shell" {

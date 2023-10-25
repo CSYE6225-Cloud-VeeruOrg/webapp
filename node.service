@@ -6,9 +6,11 @@ Requires=cloud-init.target
 [Service]
 User=csye6225
 EnvironmentFile=/etc/environment
-ExecStart=/usr/bin/node /home/admin/webapp/src/app.js
+ExecStart=/usr/bin/node /opt/csye6225/webapp/src/app.js
 Type=simple
 Restart=always
+RestartSec=10
+TimeoutSec=45
 
 [Install]
 WantedBy=cloud-init.target
