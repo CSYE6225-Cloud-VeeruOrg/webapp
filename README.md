@@ -8,7 +8,7 @@
 - AWS CLI configured with appropriate credentials for both DEV and DEMO accounts.
 - GitHub repository containing your web application and Packer templates.
 
-## Packer Template
+## Packer Template 
 
 1. Store your Packer template within the same repository as your web application.
 2. Ensure your Packer template is correctly configured to use Debian 12 as the source image.
