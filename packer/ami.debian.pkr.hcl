@@ -49,6 +49,11 @@ build {
     destination = "/tmp/node.service"
   }
 
+  provisioner "file" {
+    source      = "AmazonCloudWatch-config.json"
+    destination = "/tmp/AmazonCloudWatch-config.json"
+  }
+
   provisioner "shell" {
     script = "packer/webapp.sh"
     environment_vars = [

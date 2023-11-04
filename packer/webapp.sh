@@ -21,6 +21,13 @@ sudo mv /tmp/node.service /etc/systemd/system/
 # Install unzip
 sudo apt-get install unzip -y
 
+echo "AWS CloudWatch Agent Install Start"
+sudo wget https://s3.amazonaws.com/amazoncloudwatch-agent/debian/amd64/latest/amazon-cloudwatch-agent.deb
+sudo dpkg -i -E ./amazon-cloudwatch-agent.deb
+echo "AWS CloudWatch Agent Install End"
+
+sudo mv /tmp/AmazonCloudWatch-config.json /opt/AmazonCloudWatch-config.json
+
 sudo mkdir -p /opt/webapp
 
 sudo unzip /tmp/webapp.zip -d /opt/webapp/
@@ -41,6 +48,9 @@ sudo mv /opt/webapp /opt/csye6225/
 sudo chown -R csye6225:csye6225 /opt/csye6225/webapp
 sudo chmod -R 750 /opt/csye6225/webapp
 
+
+sudo systemctl start amazon-cloudwatch-agent
+sudo systemctl enable amazon-cloudwatch-agent
 
 # Systemd setup
 
