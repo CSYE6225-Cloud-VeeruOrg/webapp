@@ -48,6 +48,9 @@ sudo mv /opt/webapp /opt/csye6225/
 sudo chown -R csye6225:csye6225 /opt/csye6225/webapp
 sudo chmod -R 750 /opt/csye6225/webapp
 
+sudo touch /opt/app.log
+sudo chown csye6225:csye6225 /opt/app.log
+sudo chmod u+w /opt/app.log
 
 sudo systemctl start amazon-cloudwatch-agent
 sudo systemctl enable amazon-cloudwatch-agent
