@@ -31,7 +31,7 @@ const logger = createLogger({
         return `${timestamp} ${level}: ${message}`;
       })
     )}), 
-    new transports.File({ filename: 'app.log' })
+    new transports.File({ filename: '/opt/app.log' })
   ],
 });
 
