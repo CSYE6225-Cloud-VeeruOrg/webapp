@@ -1,6 +1,7 @@
-const { DataTypes } = require("sequelize");
-const sequelize = require("../utilities/sequelize");
+// const { DataTypes } = require("sequelize");
+// const sequelize = require("../utilities/sequelize");
 const { models } = require("../utilities/sequelize");
+const logger = require('../utilities/logger');
 
 exports.accountModel = {
   createAccount: async (data) => {
@@ -13,9 +14,9 @@ exports.accountModel = {
         password: data.password,
         email: data.email
       });
-      console.log(`Account created: ${data.email}`);
+      logger.info(`Account created: ${data.email}`);
     } else {
-      console.log(`Account already exists: ${data.email}`);
+      logger.info(`Account already exists: ${data.email}`);
     }
     } catch (error) {}
   
@@ -27,7 +28,7 @@ exports.accountModel = {
     if(account != null) {
       return account.dataValues;
     } else {
-      const err = new Error("Bad Request");
+      const err = new Error(`No user found with email: ${email}`);
       throw err;
     }
   }

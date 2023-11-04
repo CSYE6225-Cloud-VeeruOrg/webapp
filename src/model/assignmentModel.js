@@ -7,7 +7,7 @@ exports.assignmentModel = {
       if(assignments.length > 0){
         return assignments;
       } else {
-        const err = new Error("No Assignments");
+        const err = new Error("No Assignments Found");
         err.status = 404;
         throw err;
       }
@@ -22,13 +22,14 @@ exports.assignmentModel = {
       if(assignment != null){
         return assignment;
       } else {
-        const err = new Error("Not found");
+        const err = new Error(`Assignment not found with id: ${id}`);
         err.status = 404;
         throw err;
       }
     } catch(error) {
-      error.status = 404;
-      throw error;
+      const err = new Error(error.message);
+      err.status = 404;
+      throw err;
     }
   },
   
@@ -63,7 +64,7 @@ exports.assignmentModel = {
         });
         return updatedAssignment;
       } else {
-        const err = new Error("Forbidden");
+        const err = new Error("Forbidden: Assignment owner only can update it");
         err.status = 403;
         throw err;
       }
@@ -89,7 +90,7 @@ exports.assignmentModel = {
           throw err;
         }
       } else {
-        const err = new Error("Forbidden");
+        const err = new Error("Forbidden: Assignment owner only can delete it");
         err.status = 403;
         throw err;
       }

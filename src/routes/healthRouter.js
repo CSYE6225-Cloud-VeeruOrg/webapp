@@ -1,5 +1,6 @@
 const express = require('express');
 const healthService = require('../service/healthService');
+const logger = require('../utilities/logger');
 
 const router = express.Router();
 
@@ -14,7 +15,7 @@ router.use((req, res, next) => {
 
 router.get( "/", async ( req, res, next ) => {
     if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 0)) {
-        const err = new Error("Bad Request");
+        const err = new Error("Bad Request: Should not have body and query params");
         err.status = 400;
         next(err);
     }
@@ -22,15 +23,16 @@ router.get( "/", async ( req, res, next ) => {
         try {
             const status = await healthService.healthCheck();
             if(status) {
+                logger.info('DB connection live.')
                 res.send();
             }
         }
         catch(error) {
+            error.message = "DB connection refused";
             error.status = 503;
             next(error);
         }
     }
-
 });
 
 router.put("/", async ( req, res, next ) => {
