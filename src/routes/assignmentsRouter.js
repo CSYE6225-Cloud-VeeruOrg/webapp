@@ -33,7 +33,6 @@ router.use( async (req, res, next) => {
 
 router.get( "/", async ( req, res, next ) => {   
     try {
-        const startTime = process.hrtime();
         if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
             const err = new Error("Bad Request: Should not have body and query params");
             err.status = 400;
@@ -42,10 +41,7 @@ router.get( "/", async ( req, res, next ) => {
         const assignments = await assignmentsService.getAllAssignments();
         logger.info(`${assignments.length} assignments retrived successfully`);
         res.json(assignments);
-        const elapsed = process.hrtime(startTime);
-        const elapsedTimeInSeconds = elapsed[0] * 1000 + elapsed[1] / 1e9;
         statsdClient.increment('assignments.api.getAll');
-        statsdClient.timing('assignments.api.getAll.response_time', elapsedTimeInSeconds);
     }
     catch(error) {
         error.status = error.status || 400;
@@ -56,7 +52,6 @@ router.get( "/", async ( req, res, next ) => {
 
 router.get( "/:id", async ( req, res, next ) => {
     try {
-        const startTime = process.hrtime();
         if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
             const err = new Error("Bad Request: Should not have body and query params");
             err.status = 400;
@@ -66,10 +61,7 @@ router.get( "/:id", async ( req, res, next ) => {
         const assignment = await assignmentsService.getAssignment(id);
         logger.info(`Assignment retrived successfully - id: ${id}`);
         res.json(assignment);
-        const elapsed = process.hrtime(startTime);
-        const elapsedTimeInSeconds = elapsed[0] * 1000 + elapsed[1] / 1e9;
         statsdClient.increment('assignments.api.getbyId');
-        statsdClient.timing('assignments.api.getbyId.response_time', elapsedTimeInSeconds);
     }
     catch(error) {
         error.status = error.status || 400;
@@ -80,7 +72,6 @@ router.get( "/:id", async ( req, res, next ) => {
 
 router.post("/", async ( req, res, next ) => {
     try {
-        const startTime = process.hrtime();
         const assignmentObj = req.body;
         if(validator.validateAssignmentObj(assignmentObj)){
             const assignment = await assignmentsService.createAssignment(assignmentObj);
@@ -88,10 +79,7 @@ router.post("/", async ( req, res, next ) => {
         res.status(201);
         res.json(assignment);
         } 
-        const elapsed = process.hrtime(startTime);
-        const elapsedTimeInSeconds = elapsed[0] * 1000 + elapsed[1] / 1e9;
         statsdClient.increment('assignments.api.post');
-        statsdClient.timing('assignments.api.post.response_time', elapsedTimeInSeconds);
     } catch (error) {
         error.status = 400;
         next(error);
@@ -100,7 +88,6 @@ router.post("/", async ( req, res, next ) => {
 
 router.put("/:id", async ( req, res, next ) => {
     try {
-        const startTime = process.hrtime();
         const id = req.params.id;
         const assignmentObj = req.body;
         if(validator.validateAssignmentObj(assignmentObj)){
@@ -108,11 +95,8 @@ router.put("/:id", async ( req, res, next ) => {
             logger.info(`Assignment with id: ${id} is updated`);
             res.status(204);
             res.send();
-        }   
-        const elapsed = process.hrtime(startTime);
-        const elapsedTimeInSeconds = elapsed[0] * 1000 + elapsed[1] / 1e9;
-        statsdClient.increment('assignments.api.put');
-        statsdClient.timing('assignments.api.put.response_time', elapsedTimeInSeconds);  
+        }
+        statsdClient.increment('assignments.api.put');  
     } catch (error) {
         error.status = error.status || 400;
         next(error);
@@ -121,7 +105,6 @@ router.put("/:id", async ( req, res, next ) => {
 
 router.delete("/:id", async ( req, res, next ) => {
     try {
-        const startTime = process.hrtime();
         if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
             const err = new Error("Bad Request: Should not have body and query params");
             err.status = 400;
@@ -133,10 +116,7 @@ router.delete("/:id", async ( req, res, next ) => {
         logger.info(`Assignment with id: ${id} is deleted`);
         res.status(204);
         res.send();
-        const elapsed = process.hrtime(startTime);
-        const elapsedTimeInSeconds = elapsed[0] * 1000 + elapsed[1] / 1e9;
         statsdClient.increment('assignments.api.delete');
-        statsdClient.timing('assignments.api.delete.response_time', elapsedTimeInSeconds);
     } catch (error) {
         error.status = error.status || 404;
         next(error);
@@ -145,6 +125,7 @@ router.delete("/:id", async ( req, res, next ) => {
 });
 
 router.use("/", async ( req, res, next ) => {
+    statsdClient.increment('assignments.api.invalidMethods');
     const err = new Error("Method not allowed");
     err.status = 405;
     next(err);
