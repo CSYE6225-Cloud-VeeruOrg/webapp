@@ -33,6 +33,7 @@ router.use( async (req, res, next) => {
 
 router.get( "/", async ( req, res, next ) => {   
     try {
+        statsdClient.increment('assignments.api.getAll');
         if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
             const err = new Error("Bad Request: Should not have body and query params");
             err.status = 400;
@@ -41,7 +42,6 @@ router.get( "/", async ( req, res, next ) => {
         const assignments = await assignmentsService.getAllAssignments();
         logger.info(`${assignments.length} assignments retrived successfully`);
         res.json(assignments);
-        statsdClient.increment('assignments.api.getAll');
     }
     catch(error) {
         error.status = error.status || 400;
@@ -52,6 +52,7 @@ router.get( "/", async ( req, res, next ) => {
 
 router.get( "/:id", async ( req, res, next ) => {
     try {
+        statsdClient.increment('assignments.api.getbyId');
         if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
             const err = new Error("Bad Request: Should not have body and query params");
             err.status = 400;
@@ -61,7 +62,6 @@ router.get( "/:id", async ( req, res, next ) => {
         const assignment = await assignmentsService.getAssignment(id);
         logger.info(`Assignment retrived successfully - id: ${id}`);
         res.json(assignment);
-        statsdClient.increment('assignments.api.getbyId');
     }
     catch(error) {
         error.status = error.status || 400;
@@ -71,15 +71,15 @@ router.get( "/:id", async ( req, res, next ) => {
 
 
 router.post("/", async ( req, res, next ) => {
-    try {
+    try { 
+        statsdClient.increment('assignments.api.post');
         const assignmentObj = req.body;
         if(validator.validateAssignmentObj(assignmentObj)){
             const assignment = await assignmentsService.createAssignment(assignmentObj);
         logger.info(`Assignment created with id: ${assignment.id}`);
         res.status(201);
         res.json(assignment);
-        } 
-        statsdClient.increment('assignments.api.post');
+        }
     } catch (error) {
         error.status = 400;
         next(error);
@@ -88,6 +88,7 @@ router.post("/", async ( req, res, next ) => {
 
 router.put("/:id", async ( req, res, next ) => {
     try {
+        statsdClient.increment('assignments.api.put'); 
         const id = req.params.id;
         const assignmentObj = req.body;
         if(validator.validateAssignmentObj(assignmentObj)){
@@ -95,8 +96,7 @@ router.put("/:id", async ( req, res, next ) => {
             logger.info(`Assignment with id: ${id} is updated`);
             res.status(204);
             res.send();
-        }
-        statsdClient.increment('assignments.api.put');  
+        } 
     } catch (error) {
         error.status = error.status || 400;
         next(error);
@@ -105,6 +105,7 @@ router.put("/:id", async ( req, res, next ) => {
 
 router.delete("/:id", async ( req, res, next ) => {
     try {
+        statsdClient.increment('assignments.api.delete');
         if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
             const err = new Error("Bad Request: Should not have body and query params");
             err.status = 400;
@@ -116,7 +117,6 @@ router.delete("/:id", async ( req, res, next ) => {
         logger.info(`Assignment with id: ${id} is deleted`);
         res.status(204);
         res.send();
-        statsdClient.increment('assignments.api.delete');
     } catch (error) {
         error.status = error.status || 404;
         next(error);

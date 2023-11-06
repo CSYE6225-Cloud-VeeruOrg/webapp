@@ -16,6 +16,7 @@ router.use((req, res, next) => {
 
 router.get( "/", async ( req, res, next ) => {
     try{
+        statsdClient.increment('healthz.api.get');
         if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 0)) {
             const err = new Error("Bad Request: Should not have body and query params");
             err.status = 400;
@@ -28,7 +29,6 @@ router.get( "/", async ( req, res, next ) => {
                 res.send();
             }
         }
-        statsdClient.increment('healthz.api.get');
     } catch(error) {
         error.message = "DB connection refused";
         error.status = 503;
