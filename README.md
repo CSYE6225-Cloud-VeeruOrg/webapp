@@ -7,7 +7,7 @@
 - Packer installed on your local development machine.
 - AWS CLI configured with appropriate credentials for both DEV and DEMO accounts.
 - GitHub repository containing your web application and Packer templates.
-test
+  
 ## Packer Template 
 
 1. Store your Packer template within the same repository as your web application.
