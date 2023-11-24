@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 
 module.exports = (sequelize) => {
-    sequelize.define("Account", {
+    sequelize.define("Submission", {
         id: {
           type: DataTypes.UUID,
           defaultValue: DataTypes.UUIDV4,
@@ -11,37 +11,31 @@ module.exports = (sequelize) => {
             return this.getDataValue('id');
           },
         },
-        firstName: {
-          type: DataTypes.STRING,
-          allowNull: false,
-        },
-        lastName: {
-          type: DataTypes.STRING,
-          allowNull: false,
-        },
-        password: {
-          type: DataTypes.STRING,
-          allowNull: false
-        },
-        email: {
-          type: DataTypes.STRING,
-          allowNull: false,
-          unique: true,
-          validate: {
-            isEmail: true,
+        assignment_id: {
+            type: DataTypes.UUID,
+            allowNull: false,
+            get() {
+              return this.getDataValue('assignment_id');
+            },
+            references: {
+                model: "Assignments",
+                key: "id",
+            }
           },
+        submission_url: {
+          type: DataTypes.STRING,
+          allowNull: false,
         },
-        account_created: {
+        submission_date: {
           type: DataTypes.DATE,
           allowNull: false,
           defaultValue: DataTypes.NOW,
           set(value) {}
         },
-        account_updated: {
+        submission_updated: {
           type: DataTypes.DATE,
           allowNull: false,
           defaultValue: DataTypes.NOW,
-          set(value) {}
         }
       }, {
         timestamps: false,

@@ -1,5 +1,3 @@
-// const { DataTypes } = require("sequelize");
-// const sequelize = require("../utilities/sequelize");
 const { models } = require("../utilities/sequelize");
 const logger = require('../utilities/logger');
 

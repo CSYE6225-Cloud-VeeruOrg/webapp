@@ -15,7 +15,8 @@ const sequelize = new Sequelize({
 
 const modelDefiners = [
     require("./models/account.model"),
-    require("./models/assignments.model")
+    require("./models/assignments.model"),
+    require("./models/submission.model")
   ];
   
   for(const modelDefiner of modelDefiners) {
@@ -23,6 +24,5 @@ const modelDefiners = [
   }
   
   association(sequelize);
-
 
 module.exports = sequelize;

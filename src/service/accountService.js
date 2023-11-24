@@ -5,14 +5,13 @@ const { accountModel } = require('../model/accountModel');
 const hash = require('../utilities/hashing');
 const csvFilePath = '/opt/user.csv';
 const logger = require('../utilities/logger');
-const { log } = require('console');
 
 const accountService = {}
 
 accountService.readCSVAndCreateAccounts = async () => {
   try {
     await sequelize.sync();
-
+    console.log(csvFilePath);
     const stream = fs.createReadStream(csvFilePath);
 
     stream.on('error', (error) => {

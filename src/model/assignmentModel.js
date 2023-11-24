@@ -12,7 +12,7 @@ exports.assignmentModel = {
         throw err;
       }
     } catch(error) {
-      throw error;
+        throw error;
     }
   },
   
@@ -27,9 +27,9 @@ exports.assignmentModel = {
         throw err;
       }
     } catch(error) {
-      const err = new Error(error.message);
-      err.status = 404;
-      throw err;
+        const err = new Error(error.message);
+        err.status = 404;
+        throw err;
     }
   },
   
@@ -44,9 +44,8 @@ exports.assignmentModel = {
       });
       return assignment;
     } catch(error) {
-      throw error;
+        throw error;
     }
-  
   },
 
   updateAssignment: async function (id, assignmentObj) {
@@ -69,7 +68,7 @@ exports.assignmentModel = {
         throw err;
       }
     } catch(error) {
-      throw error;
+        throw error;
     }
   },
 
@@ -94,10 +93,35 @@ exports.assignmentModel = {
         err.status = 403;
         throw err;
       }
-      
-      
     } catch(error) {
-      throw error;
+        throw error;
     }
-  }
+  },
+
+  getSubmissions: async function (assignmentId) {
+    try {
+      const submission = await models.Submission.findAll({ where : { assignment_id : assignmentId } });
+      return submission.length;
+      // if(submission.length > 0){
+      //   return submission.length;
+      // } else {
+      //   return null;
+      // }
+    } catch(error) {
+        throw error;
+    }
+  
+  },
+
+  createSubmission: async function (assignment, submissionUrl) {
+    try {
+      const submission = await models.Submission.create({ 
+        assignment_id: assignment.id,
+        submission_url: submissionUrl
+      });
+      return submission;
+    } catch(error) {
+        throw error;
+    }
+  },
 }

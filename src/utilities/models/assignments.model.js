@@ -46,13 +46,13 @@ module.exports = (sequelize) => {
         assignment_created: {
           type: DataTypes.DATE,
           allowNull: false,
-          defaultValue: new Date(),
+          defaultValue: DataTypes.NOW,
           set(value) {}
         },
         assignment_updated: {
           type: DataTypes.DATE,
           allowNull: false,
-          defaultValue: new Date(),
+          defaultValue: DataTypes.NOW,
         }
       }, {
         timestamps: false,

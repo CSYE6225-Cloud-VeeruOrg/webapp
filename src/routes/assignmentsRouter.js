@@ -9,7 +9,7 @@ const statsdClient = require('../utilities/statsdConfig');
 const router = express.Router();
 
 router.use( async (req, res, next) => {
-    if(req.baseUrl != '/vl/assignments') {
+    if(req.baseUrl != '/v1/assignments') {
         const err = new Error(`Invalid Url ${req.originalUrl}`);
         err.status = 400;
         next(err);
@@ -22,6 +22,7 @@ router.use( async (req, res, next) => {
         const isAuthenticated = await accountService.authenticateAccount(email, password);
         if(isAuthenticated != null) {
             req.body.user_id = isAuthenticated.id;
+            req.body.email = email;
             logger.info(`User authenticated: ${email}`);
             next();
         }
@@ -34,7 +35,7 @@ router.use( async (req, res, next) => {
 router.get( "/", async ( req, res, next ) => {   
     try {
         statsdClient.increment('assignments.api.getAll');
-        if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
+        if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 2)) {
             const err = new Error("Bad Request: Should not have body and query params");
             err.status = 400;
             throw err;
@@ -53,7 +54,7 @@ router.get( "/", async ( req, res, next ) => {
 router.get( "/:id", async ( req, res, next ) => {
     try {
         statsdClient.increment('assignments.api.getbyId');
-        if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
+        if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 2)) {
             const err = new Error("Bad Request: Should not have body and query params");
             err.status = 400;
             throw err;
@@ -84,6 +85,21 @@ router.post("/", async ( req, res, next ) => {
         error.status = 400;
         next(error);
     } 
+});
+
+router.post("/:id/submission", async (req, res, next) => {
+    try {
+        statsdClient.increment('assignments_submission.api.post');
+        const id = req.params.id;
+        const submissionUrl = req.body.submission_url;
+        const submission = await assignmentsService.submitAssignment(id, submissionUrl, req.body.email);
+        logger.info(`Assignment with id: ${id} is submitted`);
+        res.status(201);
+        res.send(submission);
+    } catch(error) {
+        error.status = error.status || 400;
+        next(error);
+    }
 });
 
 router.put("/:id", async ( req, res, next ) => {

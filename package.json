@@ -19,7 +19,8 @@
     "pg": "^8.11.3",
     "sequelize": "^6.33.0",
     "uuid": "^9.0.1",
-    "winston": "^3.11.0"
+    "winston": "^3.11.0",
+    "aws-sdk": "2.1499.0"
   },
   "author": "Veerendra",
   "license": "ISC",
