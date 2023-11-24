@@ -28,7 +28,7 @@ app.use((req, res, next) => {
 });
 app.use(requestLogger);
 app.use("/healthz", healthRouter);
-app.use("/vl/assignments", assignmentsRouter);
+app.use("/v1/assignments", assignmentsRouter);
 app.use((req, res, next) => {
     const err = new Error(` Invalid Url ${req.originalUrl}`);
     err.status = 400;

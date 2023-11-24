@@ -1,6 +1,6 @@
 
 association = (sequelize) => {
-    const { Account, Assignment } = sequelize.models;
+    const { Account, Assignment, Submission } = sequelize.models;
 
     Account.hasMany(Assignment, {
         foreignKey: "user_id",
@@ -9,6 +9,15 @@ association = (sequelize) => {
 
     Assignment.belongsTo(Account, {
         foreignKey: "user_id"
+    }); 
+
+    Assignment.hasMany(Submission, {
+        foreignKey: "assignment_id",
+        as: "submission_id"
+    })
+
+    Submission.belongsTo(Assignment, {
+        foreignKey: "assignment_id"
     }); 
 }
 
