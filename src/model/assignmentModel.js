@@ -98,26 +98,27 @@ exports.assignmentModel = {
     }
   },
 
-  getSubmissions: async function (assignmentId) {
+  getSubmissions: async function (assignmentId, userId) {
     try {
-      const submission = await models.Submission.findAll({ where : { assignment_id : assignmentId } });
-      return submission.length;
-      // if(submission.length > 0){
-      //   return submission.length;
-      // } else {
-      //   return null;
-      // }
+      if(userId) {
+        const submission = await models.Submission.findAll({ where : { assignment_id : assignmentId, user_id: userId } });
+        return submission.length; 
+      } else {
+        const submission = await models.Submission.findAll({ where : { assignment_id : assignmentId } });
+        return submission.length;
+      }
     } catch(error) {
         throw error;
     }
   
   },
 
-  createSubmission: async function (assignment, submissionUrl) {
+  createSubmission: async function (assignment, submissionUrl, userId) {
     try {
       const submission = await models.Submission.create({ 
         assignment_id: assignment.id,
-        submission_url: submissionUrl
+        submission_url: submissionUrl,
+        user_id: userId
       });
       return submission;
     } catch(error) {

@@ -92,7 +92,7 @@ router.post("/:id/submission", async (req, res, next) => {
         statsdClient.increment('assignments_submission.api.post');
         const id = req.params.id;
         const submissionUrl = req.body.submission_url;
-        const submission = await assignmentsService.submitAssignment(id, submissionUrl, req.body.email);
+        const submission = await assignmentsService.submitAssignment(id, submissionUrl, req.body.user_id, req.body.email);
         logger.info(`Assignment with id: ${id} is submitted`);
         res.status(201);
         res.send(submission);
@@ -122,7 +122,7 @@ router.put("/:id", async ( req, res, next ) => {
 router.delete("/:id", async ( req, res, next ) => {
     try {
         statsdClient.increment('assignments.api.delete');
-        if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 1)) {
+        if(Object.keys(req.query).length > 0 || (req.body && Object.keys(req.body).length > 2)) {
             const err = new Error("Bad Request: Should not have body and query params");
             err.status = 400;
             throw err;

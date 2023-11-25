@@ -14,10 +14,19 @@ association = (sequelize) => {
     Assignment.hasMany(Submission, {
         foreignKey: "assignment_id",
         as: "submission_id"
-    })
+    });
 
     Submission.belongsTo(Assignment, {
         foreignKey: "assignment_id"
+    }); 
+
+    Account.hasMany(Submission, {
+        foreignKey: "user_id",
+        as: "submission_id"
+    });
+
+    Submission.belongsTo(Account, {
+        foreignKey: "user_id"
     }); 
 }
 

@@ -30,16 +30,16 @@ assignmentsService.createAssignment = async (assignmentObj) => {
     }
 };
 
-assignmentsService.submitAssignment = async (assignmentId, submissionUrl, user_id) => {
+assignmentsService.submitAssignment = async (assignmentId, submissionUrl, userId, userEmail) => {
     try {
         const assignment = await assignmentModel.getAssignment(assignmentId);
-        const noOfSubmissions = await assignmentModel.getSubmissions(assignmentId);
+        const noOfSubmissions = await assignmentModel.getSubmissions(assignmentId, userId);
         const assignmentDueDate = new Date(assignment.deadline);
         const currentDate = new Date();
         if(assignment.num_of_attempts > noOfSubmissions) {
             if(assignmentDueDate > currentDate) {
-                const submission = await assignmentModel.createSubmission(assignment, submissionUrl);
-                await sns.post(user_id, submission, noOfSubmissions);
+                const submission = await assignmentModel.createSubmission(assignment, submissionUrl, userId);
+                // await sns.post(userEmail, submission, noOfSubmissions);
                 return submission;
             } else {
                 const err = new Error("Can not submit. Due date has passed.");
@@ -67,9 +67,17 @@ assignmentsService.updateAssignment = async (id, assignmentObj) => {
 
 assignmentsService.deleteAssignment = async (id, user_id) => {
     try {
-        const status = await assignmentModel.deleteAssignment(id, user_id);
-        if(status){
-            return true;
+        const submissions = await assignmentModel.getSubmissions(id);
+        console.log(submissions);
+        if(submissions == 0) {
+            const status = await assignmentModel.deleteAssignment(id, user_id);
+            if(status){
+                return true;
+            }
+        } else {
+            const err = new Error("Cannot delete assignment, there are submissions");
+            err.status = 409;
+            throw err; 
         }
     } catch(error) {
         throw error;
