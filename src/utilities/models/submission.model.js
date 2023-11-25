@@ -12,16 +12,24 @@ module.exports = (sequelize) => {
           },
         },
         assignment_id: {
-            type: DataTypes.UUID,
-            allowNull: false,
-            get() {
-              return this.getDataValue('assignment_id');
-            },
-            references: {
-                model: "Assignments",
-                key: "id",
-            }
+          type: DataTypes.UUID,
+          allowNull: false,
+          get() {
+            return this.getDataValue('assignment_id');
           },
+          references: {
+            model: "Assignments",
+            key: "id",
+          }
+        },
+        user_id: {
+          type:DataTypes.UUID,
+          allowNull: false,
+          references: {
+            model: "Accounts",
+            key: "id",
+          }
+        },
         submission_url: {
           type: DataTypes.STRING,
           allowNull: false,
