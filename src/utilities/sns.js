@@ -14,7 +14,9 @@ sns.post = async (userEmail, submission, noOfSubmissions) => {
         // });
 
         
-        const snsClient = new AWS.SNS();
+        const snsClient = new AWS.SNS({
+            region: process.env.AWS_REGION
+        });
  
         const message = {
             submissionDetails: submission,
