@@ -39,7 +39,7 @@ assignmentsService.submitAssignment = async (assignmentId, submissionUrl, userId
         if(assignment.num_of_attempts > noOfSubmissions) {
             if(assignmentDueDate > currentDate) {
                 const submission = await assignmentModel.createSubmission(assignment, submissionUrl, userId);
-                // await sns.post(userEmail, submission, noOfSubmissions);
+                await sns.post(userEmail, submission, noOfSubmissions);
                 return submission;
             } else {
                 const err = new Error("Can not submit. Due date has passed.");
