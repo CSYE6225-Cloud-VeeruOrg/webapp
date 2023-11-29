@@ -11,7 +11,7 @@ validator.validateAssignmentObj = (assignmentObj) => {
 }
 
 validator.validSubmissionUrl = (submissionUrl) => {
-    if(submissionUrl == null || submissionUrl == "" || !submissionUrl.endsWith(".zip")) {
+    if(submissionUrl == null || submissionUrl == "") {
         const err = new Error("Invalid submission Url");
         err.status = 400;
         throw err;

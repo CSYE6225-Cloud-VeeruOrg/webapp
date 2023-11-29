@@ -48,7 +48,7 @@ assignmentsService.submitAssignment = async (assignmentId, submissionUrl, userId
             }   
         } else {
             const err = new Error("Can not submit. No of attempts limit exceded.");
-            err.status = 422;
+            err.status = 403;
             throw err;
         }
     } catch (error) {
@@ -76,7 +76,7 @@ assignmentsService.deleteAssignment = async (id, user_id) => {
             }
         } else {
             const err = new Error("Cannot delete assignment, there are submissions");
-            err.status = 409;
+            err.status = 403;
             throw err; 
         }
     } catch(error) {
