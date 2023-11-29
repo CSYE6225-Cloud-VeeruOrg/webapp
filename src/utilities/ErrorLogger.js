@@ -13,7 +13,7 @@ let errorLogger = ( err, req, res, next ) => {
     logger.error(err.stack);
     if( err.status ) res.status( err.status );
     else res.status( 400 );
-    res.send(); 
+    res.send(err.message); 
     next();
 }
 

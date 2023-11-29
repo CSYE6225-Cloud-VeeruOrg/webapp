@@ -10,4 +10,14 @@ validator.validateAssignmentObj = (assignmentObj) => {
     }
 }
 
+validator.validSubmissionUrl = (submissionUrl) => {
+    if(submissionUrl == null || submissionUrl == "" || !submissionUrl.endsWith(".zip")) {
+        const err = new Error("Invalid submission Url");
+        err.status = 400;
+        throw err;
+    } else {
+        return true;
+    }
+}
+
 module.exports = validator;

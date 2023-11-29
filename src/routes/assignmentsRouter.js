@@ -27,8 +27,9 @@ router.use( async (req, res, next) => {
             next();
         }
     } catch (error) {
-        error.status = 401;
-        next(error);
+        const err = new Error("Unauthorized");
+        err.status = 401;
+        next(err);
     }
 });
 
@@ -92,10 +93,12 @@ router.post("/:id/submission", async (req, res, next) => {
         statsdClient.increment('assignments_submission.api.post');
         const id = req.params.id;
         const submissionUrl = req.body.submission_url;
-        const submission = await assignmentsService.submitAssignment(id, submissionUrl, req.body.user_id, req.body.email);
-        logger.info(`Assignment with id: ${id} is submitted`);
-        res.status(201);
-        res.send(submission);
+        if(validator.validSubmissionUrl(submissionUrl)) {
+            const submission = await assignmentsService.submitAssignment(id, submissionUrl, req.body.user_id, req.body.email);
+            logger.info(`Assignment with id: ${id} is submitted`);
+            res.status(201);
+            res.send(submission);
+        }
     } catch(error) {
         error.status = error.status || 400;
         next(error);
