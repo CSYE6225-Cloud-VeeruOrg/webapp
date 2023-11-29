@@ -43,12 +43,12 @@ assignmentsService.submitAssignment = async (assignmentId, submissionUrl, userId
                 return submission;
             } else {
                 const err = new Error("Can not submit. Due date has passed.");
-                err.status = 400;
+                err.status = 403;
                 throw err; 
             }   
         } else {
             const err = new Error("Can not submit. No of attempts limit exceded.");
-            err.status = 400;
+            err.status = 422;
             throw err;
         }
     } catch (error) {
