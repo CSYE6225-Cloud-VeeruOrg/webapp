@@ -83,3 +83,24 @@ jobs:
     - name: Build AMI
       run: |
         packer build -var "artifact=zip/webapp.zip" packer/.
+
+    - name: Fetech Latest AMI ID
+      run: |
+        AMI_ID=$(jq -r '.builds[-1].artifact_id' ./webapp/packer/manifest.json | cut -d ":" -f2)
+        echo $AMI_ID
+
+    - name: Configure AWS Demo Credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_DEMO }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY_DEMO }}
+        aws-region: ${{ secrets.AWS_REGION }}
+
+    - name: Create Launch Template Version and Configure Auto Scaling Group
+      run: |
+        aws ec2 create-launch-template-version --launch-template-name veeru-launch-template-3045c12 --source-version 1 --region ${{ secrets.AWS_REGION }} --image-id $AMI_ID
+        aws autoscaling update-auto-scaling-group --auto-scaling-group-name veeru-asg-547a25d --launch-template LaunchTemplateName=veeru-launch-template-3045c12,Version='$Latest' --region ${{ secrets.AWS_REGION }}
+
+    - name: Create Launch Template Version and Configure Auto Scaling Group
+      run: |
+        aws autoscaling start-instance-refresh --auto-scaling-group-name veeru-asg-547a25d 
