@@ -61,4 +61,9 @@ build {
       "CHECKPOINT_DISABLE=1",
     ]
   }
+
+  post-processor "manifest" {
+    output     = "./manifest.json"
+    strip_path = true
+  }
 }
