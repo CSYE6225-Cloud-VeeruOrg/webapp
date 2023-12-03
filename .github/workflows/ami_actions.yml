@@ -111,7 +111,7 @@ jobs:
         retries=0
         max_retries=10
         while [ $retries -lt $max_retries ]; do
-            status=$(aws autoscaling describe-instance-refreshes --auto-scaling-group-name your-auto-scaling-group-name --query 'InstanceRefreshes[0].Status' --output text)
+            status=$(aws autoscaling describe-instance-refreshes --auto-scaling-group-name veeru-asg-d7c4332 --query 'InstanceRefreshes[0].Status' --output text)
             if [ "$status" = "Successful" ]; then
                 echo "Instance refresh succeeded."
                 exit 0
