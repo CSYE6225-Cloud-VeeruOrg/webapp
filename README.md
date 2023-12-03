@@ -44,3 +44,6 @@
   3. Build the AMI with application dependencies and set up the application by copying the application artifacts and configuration files.
   4. The resulting AMI will be shared with the DEMO account.
   5. No AMI will be built if any of the jobs or steps in the workflow fail.
+  6. A new Launch Template version with the latest AMI ID for the autoscaling group is created. The autoscaling group is configured to use the latest version of the Launch Template.
+  7. Instance refresh is done using AWS CLI.
+  8. GitHub Actions workflow will wait for instance refresh to complete before exiting. The status of GitHub Actions workflow will match the status of instance refresh command.
