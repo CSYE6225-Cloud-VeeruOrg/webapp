@@ -1,8 +1,0 @@
-{
-    "builds": [
-      {
-        "artifact_id": "ami-0d993698b723f03b9",
-        "packer_run_uuid": "some-uuid"
-      }
-    ]
-  }

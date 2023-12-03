@@ -80,9 +80,9 @@ jobs:
       run: |
         packer init packer/.
 
-    # - name: Build AMI
-    #   run: |
-    #     packer build -var "artifact=zip/webapp.zip" packer/.
+    - name: Build AMI
+      run: |
+        packer build -var "artifact=zip/webapp.zip" packer/.
 
     - name: Fetech Latest AMI ID
       working-directory: ../webapp
