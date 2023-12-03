@@ -85,7 +85,7 @@ jobs:
         packer build -var "artifact=zip/webapp.zip" packer/.
 
     - name: Fetech Latest AMI ID
-      working-directory: ../webapp
+      working-directory: ./webapp
       run: |
         AMI_ID=$(jq -r '.builds[-1].artifact_id' packer/manifest.json | cut -d ":" -f2)
         echo $AMI_ID
