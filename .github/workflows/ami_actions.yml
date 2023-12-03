@@ -99,7 +99,7 @@ jobs:
 
     - name: Create Launch Template Version and Configure Auto Scaling Group
       run: |
-        aws ec2 create-launch-template-version --launch-template-name veeru-launch-template-d0a9716 --source-version 1 --region ${{ secrets.AWS_REGION }} --image-id $AMI_ID
+        aws ec2 create-launch-template-version --launch-template-name veeru-launch-template-d0a9716 --source-version 1 --region ${{ secrets.AWS_REGION }} --launch-template-data "ImageId=$AMI_ID"
         aws autoscaling update-auto-scaling-group --auto-scaling-group-name veeru-asg-d7c4332 --launch-template LaunchTemplateName=veeru-launch-template-d0a9716,Version='$Latest' --region ${{ secrets.AWS_REGION }}
 
     - name: Instance Refreshing
