@@ -102,18 +102,18 @@ jobs:
       run: |
         AMI_ID=$(jq -r '.builds[-1].artifact_id' manifest.json | cut -d ":" -f2)
         echo $AMI_ID
-        aws ec2 create-launch-template-version --launch-template-name veeru-launch-template --source-version 1 --region ${{ secrets.AWS_REGION }} --launch-template-data "ImageId=$AMI_ID"
-        aws autoscaling update-auto-scaling-group --auto-scaling-group-name veeru-asg --launch-template LaunchTemplateName=veeru-launch-template,Version='$Latest' --region ${{ secrets.AWS_REGION }}
+        aws ec2 create-launch-template-version --launch-template-name ${{ vars.AWS_LAUNCH_TEMPLATE_NAME }} --source-version 1 --region ${{ secrets.AWS_REGION }} --launch-template-data "ImageId=$AMI_ID"
+        aws autoscaling update-auto-scaling-group --auto-scaling-group-name ${{ vars.AWS_AUTOSCALING_GROUP_NAME }}  --launch-template LaunchTemplateName=${{ vars.AWS_LAUNCH_TEMPLATE_NAME }},Version='$Latest' --region ${{ secrets.AWS_REGION }}
 
     - name: Instance Refreshing
       run: |
-        aws autoscaling start-instance-refresh --auto-scaling-group-name veeru-asg
+        aws autoscaling start-instance-refresh --auto-scaling-group-name ${{ vars.AWS_AUTOSCALING_GROUP_NAME }}
     
     - name: Wait for Instance Refresh Completion
       id: check-status
       run: |
         while true; do
-          status=$(aws autoscaling describe-instance-refreshes --auto-scaling-group-name veeru-asg --query 'InstanceRefreshes[0].Status' --output text)
+          status=$(aws autoscaling describe-instance-refreshes --auto-scaling-group-name ${{ vars.AWS_AUTOSCALING_GROUP_NAME }} --query 'InstanceRefreshes[0].Status' --output text)
           if [ "$status" = "Successful" ]; then
               echo "Instance refresh succeeded."
               exit 0
