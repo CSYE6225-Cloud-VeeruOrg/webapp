@@ -112,23 +112,14 @@ jobs:
     - name: Wait for Instance Refresh Completion
       id: check-status
       run: |
-        retries=0
-        max_retries=10
-        while [ $retries -lt $max_retries ]; do
-            status=$(aws autoscaling describe-instance-refreshes --auto-scaling-group-name veeru-asg --query 'InstanceRefreshes[0].Status' --output text)
-            if [ "$status" = "Successful" ]; then
-                echo "Instance refresh succeeded."
-                exit 0
-            elif [ "$status" = "Failed" ]; then
-                echo "Instance refresh failed."
-                exit 1
-            fi
-            sleep 60s
-            retries=$((retries+1))
+        while true; do
+          status=$(aws autoscaling describe-instance-refreshes --auto-scaling-group-name veeru-asg --query 'InstanceRefreshes[0].Status' --output text)
+          if [ "$status" = "Successful" ]; then
+              echo "Instance refresh succeeded."
+              exit 0
+          elif [ "$status" = "Failed" ]; then
+              echo "Instance refresh failed."
+              exit 1
+          fi
+          sleep 60s
         done
-        echo "Instance refresh did not complete within the specified time."
-        exit 1
-
-    - name: Update Workflow Status
-      if: always()
-      run: exit ${{ steps.check-status.outcome }}
