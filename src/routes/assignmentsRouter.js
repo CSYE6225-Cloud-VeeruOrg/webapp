@@ -9,7 +9,7 @@ const statsdClient = require('../utilities/statsdConfig');
 const router = express.Router();
 
 router.use( async (req, res, next) => {
-    if(req.baseUrl != '/v2/assignments') {
+    if(req.baseUrl != '/v1/assignments') {
         const err = new Error(`Invalid Url ${req.originalUrl}`);
         err.status = 400;
         next(err);
